@@ -73,7 +73,14 @@ Make an HTTP POST request to [!DNL Target] edge servers to process the file. Her
 ```
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
 ```
+```
+curl --request POST \
+  --url http://<CLIENTCODE>.tt.omtrdc.net/m2/<CLIENTCODE>/v2/profile/batchUpdate \
+  --header 'Authorization: Bearer <Token>' \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
+  --data YmF0Y2g9dGhpcmRQYXJ0eUlkLGZpcnN0TmFtZSxsYXN0TmFtZSxlbWFpbA0KVVNVMTAwNDEwMCxydWRyYTEscHJhdmVlbix0ZXN0MUBhZG9iZS5jb20NClVTVTEwMDQxMDEscnVkcmEyLHByYXZlZW4sdGVzdDJAYWRvYmUuY29tDQpVU1UxMDA0MTAyLHJ1ZHJhMyxwcmF2ZWVuLHRlc3QzQGFkb2JlLmNvbQ0KVVNVMTAwNDEwMyxydWRyYTQscHJhdmVlbix0ZXN0NEBhZG9iZS5jb20NClVTVTEwMDQxMDQscnVkcmE1LHByYXZlZW4sdGVzdDVAYWRvYmUuY29tDQpVU1UxMDA0MTA1LHJ1ZHJhNixwcmF2ZWVuLHRlc3Q2QGFkb2JlLmNvbQ0KVVNVMTAwNDEwNixydWRyYTcscHJhdmVlbix0ZXN0N0BhZG9iZS5jb20=
 
+```
 Where:
 
 BATCH.TXT is the filename. CLIENTCODE is the [!DNL Target] client code.
